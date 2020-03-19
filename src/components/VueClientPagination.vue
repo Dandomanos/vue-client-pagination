@@ -1,7 +1,12 @@
 <template>
   <div :id="$vnode.key">
     <slot v-for="item in paginatedItems[currentPage]" :item="item" />
-    <Paginator :current-page="currentPage" :pages="paginatedItems" @goPage="goPage" />
+    <Paginator
+      ref="paginator"
+      :current-page="currentPage"
+      :pages="paginatedItems"
+      @goPage="goPage"
+    />
   </div>
 </template>
 <script lang="ts">

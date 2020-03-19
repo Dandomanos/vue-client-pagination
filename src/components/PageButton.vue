@@ -5,8 +5,6 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-// import Vue from 'vue'
-// import Component from 'nuxt-class-component'
 @Component({
   props: {
     value: {
@@ -28,9 +26,6 @@ class PageButton extends Vue {
 export default PageButton
 </script>
 <style lang="scss">
-$border-radius: 5px;
-$font-color: #292929;
-// $brand: #496d91;
 .dandomanos-vue-client-pagination__page {
   border-radius: $border-radius;
   border: 1px solid #979797;

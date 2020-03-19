@@ -8,7 +8,8 @@
     "build": "vue-cli-service build",
     "build:lib": "npx vue-cli-service build --target lib --name vue-client-pagination src/index.js && cp -r build/ dist/",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit --collect-coverage",
+    "test:unit:dev": "vue-cli-service test:unit --collect-coverage --watch",
     "publish:patch": "cd dist && npm version patch && npm publish --access=public"
   },
   "dependencies": {
