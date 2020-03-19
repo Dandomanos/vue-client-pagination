@@ -1,0 +1,24 @@
+{
+  "name": "@dandomanos/vue-client-pagination",
+  "description": "Easy Vue client pagination",
+  "author": {
+    "name": "Dandomanos dandomanos@gmail.com"
+  },
+  "version": "0.0.4",
+  "license": "MIT",
+  "main": "components-lib.common.js",
+  "unpkg": "components-lib.common.js",
+  "jsdelivr": "components-lib.common.js",
+  "peerDependencies": {
+    "vue": ">=2.0.0"
+  },
+  "files": [
+    "*"
+  ],
+  "keywords": [
+    "vue",
+    "pagination",
+    "pager",
+    "page"
+  ]
+}

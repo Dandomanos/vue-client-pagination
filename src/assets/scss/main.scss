@@ -1,0 +1,28 @@
+@import '_const';
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.mobile-only {
+  @media #{$min-tablet} {
+    display: none;
+  }
+}
+.desktop-only {
+  display: none;
+  @media #{$min-tablet} {
+    display: inherit;
+  }
+}
+button {
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: none;
+  }
+}

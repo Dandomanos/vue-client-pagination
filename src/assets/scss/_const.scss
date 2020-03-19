@@ -1,0 +1,16 @@
+/* ********************      COLORS      ******************** */
+$brand: #496d91;
+$dark-blue: #2c3e50;
+$black: #292929;
+$border-color: $dark-blue;
+$font-color: $black;
+
+/* ********************       DISPLAY     ******************** */
+$mobile-page-button-size: 2.75rem;
+$desktop-page-button-size: 3.1875rem;
+$arrow-button-size: 3rem;
+
+/* ********************     BREAKPOINTS   ******************** */
+$min-md-mobile: 'screen and (min-width:400px)' !default;
+$min-tablet: 'screen and (min-width:768px)' !default;
+$max-mobile: 'screen and (max-width:767px)' !default;
