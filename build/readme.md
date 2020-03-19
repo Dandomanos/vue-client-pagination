@@ -36,3 +36,7 @@ Vue.use(VueClientPagination)
 #### Key:
 
 Add any key to scroll to first item on page loaded
+
+## Live demo
+
+http://oafish-fan.surge.sh/

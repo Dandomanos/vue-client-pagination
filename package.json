@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:lib": "npx vue-cli-service build --target lib --name vue-client-pagination src/index.js && cp -r build/ dist/",
+    "build:lib": "npx vue-cli-service build --dest dist-lib --target lib --name vue-client-pagination src/index.js && cp -r build/ dist-lib/",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit --collect-coverage",
     "test:unit:dev": "vue-cli-service test:unit --collect-coverage --watch",
