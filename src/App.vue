@@ -3,25 +3,21 @@
     <img alt="Vue logo" src="./assets/logo.png" />
     <div class="container">
       <VueClientPagination :key="'news-1'" :items="items" :page-size="pageSize">
-        <!-- <div slot-scope="page">
-          {{ page }}
-        </div> -->
-        <NewItem slot-scope="page" :new-item="page.item" />
+        <Post slot-scope="page" :post="page.item" />
       </VueClientPagination>
     </div>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import VueClientPagination from './components/VueClientPagination.vue'
-import NewItem from './components/NewItem.vue'
+import Post from './components/Post.vue'
 
 @Component({
   components: {
     VueClientPagination,
-    NewItem,
+    Post,
   },
 })
 export default class App extends Vue {
@@ -43,8 +39,15 @@ export default class App extends Vue {
         alt: 'Dandomanos',
       },
       index: index + 1,
-      title: 'Vue Pager by Dandomanos',
-      description: 'git-hub....',
+      title: 'Vue Client Pagination by',
+      author: {
+        name: 'Dandomanos',
+        url: 'https://github.com/Dandomanos',
+      },
+      repo: {
+        url: 'https://github.com/Dandomanos/vue-client-pagination',
+      },
+      description: 'Easy documents pagination for Vue.',
     }
   }
 }

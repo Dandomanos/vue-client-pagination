@@ -11,7 +11,6 @@
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-import NewItem from '@/components/NewItem.vue'
 import Paginator from '@/components/Paginator.vue'
 
 @Component({
@@ -29,7 +28,7 @@ import Paginator from '@/components/Paginator.vue'
       default: 0,
     },
   },
-  components: { NewItem, Paginator },
+  components: { Paginator },
 })
 class VueClientPagination extends Vue {
   currentPage = 0

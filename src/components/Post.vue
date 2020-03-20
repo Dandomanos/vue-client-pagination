@@ -12,12 +12,28 @@
         </div>
       </div>
       <div class="column is-8 is-9-tablet">
-        <div class="dandomanos-vue-client-pagination-post__text-content">
-          <h3 v-if="title" class="dandomanos-vue-client-pagination-post__title">{{ title }}</h3>
-          <p v-if="description" class="dandomanos-vue-client-pagination-post__description">
-            {{ description }}
-          </p>
-          <div class="dandomanos-vue-client-pagination-post__border"></div>
+        <div class="dandomanos-vue-client-pagination-post__text-wrapper">
+          <div class="dandomanos-vue-client-pagination-post__text-content">
+            <h3 v-if="title" class="dandomanos-vue-client-pagination-post__title">
+              {{ title }}
+              <a
+                class="dandomanos-vue-client-pagination-post__author"
+                :href="author.url"
+                target="_blank"
+                >{{ author.name }}</a
+              >
+            </h3>
+            <p v-if="description" class="dandomanos-vue-client-pagination-post__description">
+              {{ description }}
+            </p>
+            <a
+              class="dandomanos-vue-client-pagination-post__repo"
+              :href="repo.url"
+              target="_blank"
+              >{{ repo.url }}</a
+            >
+            <div class="dandomanos-vue-client-pagination-post__border"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -27,31 +43,39 @@
 import { Component, Vue } from 'vue-property-decorator'
 @Component({
   props: {
-    newItem: {
+    post: {
       type: Object,
       default: () => ({}),
     },
   },
 })
-class NewItem extends Vue {
+class Post extends Vue {
   get image(): object {
     const self: any = this
-    return self.newItem.image || {}
+    return self.post.image || {}
   }
   get title(): string {
     const self: any = this
-    return self.newItem.title || ''
+    return self.post.title || ''
   }
   get description(): string {
     const self: any = this
-    return self.newItem.description || ''
+    return self.post.description || ''
+  }
+  get author(): string {
+    const self: any = this
+    return self.post.author || {}
+  }
+  get repo(): string {
+    const self: any = this
+    return self.post.repo || {}
   }
   get index(): number {
     const self: any = this
-    return self.newItem.index || 1
+    return self.post.index || 1
   }
 }
-export default NewItem
+export default Post
 </script>
 <style lang="scss">
 @import '~bulma/sass/utilities/_all.sass';
@@ -94,5 +118,24 @@ export default NewItem
     margin-top: 0.25rem;
     letter-spacing: -2px;
   }
+}
+.dandomanos-vue-client-pagination-post__text-wrapper {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100%;
+}
+.dandomanos-vue-client-pagination-post a {
+  color: $link-color;
+}
+
+.dandomanos-vue-client-pagination-post__author {
+  text-decoration: none;
+  font-weight: bold;
+}
+.dandomanos-vue-client-pagination-post__repo {
+  font-size: 1rem;
 }
 </style>
